@@ -1,4 +1,5 @@
-<h2><a href="https://practice.geeksforgeeks.org/problems/find-smallest-range-containing-elements-from-k-lists/1">Smallest range in K lists</a></h2><h3>Difficulty Level : Hard</h3><hr><div class="problems_problem_content__Xm_eO"><p><span style="font-size:18px">Given <strong>K</strong> sorted lists of integers,&nbsp;<strong>KSortedArray[]</strong>&nbsp;of size <strong>N</strong> each. The task is to find the smallest range that includes at least one element from each of the <strong>K</strong> lists. If more than one such range's are found, return&nbsp;the first such range found.</span></p>
+<h2><a href="https://practice.geeksforgeeks.org/problems/find-smallest-range-containing-elements-from-k-lists/1">Smallest range in K lists</a></h2><h3>Difficulty Level : Hard</h3><hr><div class="problems_problem_content__Xm_eO"><p><span style="font-size:18px">Given <strong>K</strong> sorted lists of integers,&nbsp;<strong>KSortedArray[]</strong>&nbsp;of size <strong>N</strong> each. The task is to 
+  find the smallest range that includes at least one element from each of the <strong>K</strong> lists. If more than one such range's are found, return&nbsp;the first such range found.</span></p>
 
 <p><span style="font-size:18px"><strong>Example 1:</strong></span></p>
 
@@ -36,5 +37,16 @@ KSortedArray[][] = {{1 2 3 4},
 <div><span style="font-size:18px"><strong>Constraints:</strong><br>
 1 &lt;= K,N &lt;= 500</span></div>
 
-<div><span style="font-size:18px">0 &lt;= a[ i ] &lt;= 10<sup>5</sup></span></div>
-</div><p><span style=font-size:18px><strong>Company Tags : </strong><br><code>Flipkart</code>&nbsp;<code>Amazon</code>&nbsp;<br><p><span style=font-size:18px><strong>Topic Tags : </strong><br><code>Arrays</code>&nbsp;<code>Heap</code>&nbsp;<code>Data Structures</code>&nbsp;
+
+
+
+Approach Discuss
+1) Take the first element of every k array
+2) Now put them in minheap and also keep track of maximum element from that.
+3) From minheap we have a min element and we also now have a maximum element
+4) This creates a range
+5) To reduce range of [A,B] increaseA and decrease B
+6) We cannot decrease B as it is first element of any one of the array.   decreasing it will lead to exclusion of that array.
+7) So  we have to just increase A 
+8) The array which was having min ele just take next element from that array and let other k-1 elements same in heap
+9) Continue till we get to end of any one array
