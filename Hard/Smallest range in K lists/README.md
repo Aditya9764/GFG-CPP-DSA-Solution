@@ -40,6 +40,19 @@ KSortedArray[][] = {{1 2 3 4},
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 Approach Discuss
 1) Take the first element of every k array
 2) Now put them in minheap and also keep track of maximum element from that.
