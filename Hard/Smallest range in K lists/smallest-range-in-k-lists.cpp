@@ -1,4 +1,18 @@
 //{ Driver Code Starts
+/*
+	Approach Discuss
+
+1) Take the first element of every k array
+2) Now put them in minheap and also keep track of maximum element from that.
+3) From minheap we have a min element and we also now have a maximum element
+4) This creates a range
+5) To reduce range of [A,B] increaseA and decrease B
+6) We cannot decrease B as it is first element of any one of the array. decreasing it will lead to exclusion of that array.
+7) So we have to just increase A
+8) The array which was having min ele just take next element from that array and let other k-1 elements same in heap
+9) Continue till we get to end of any one array
+
+*/
 #include<bits/stdc++.h>
 using namespace std;
 #define N 1000
