@@ -39,20 +39,6 @@ KSortedArray[][] = {{1 2 3 4},
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Approach Discuss
 1) Take the first element of every k array
 2) Now put them in minheap and also keep track of maximum element from that.
@@ -63,3 +49,7 @@ Approach Discuss
 7) So  we have to just increase A 
 8) The array which was having min ele just take next element from that array and let other k-1 elements same in heap
 9) Continue till we get to end of any one array
+
+
+Time complexity: O(N * K * log K)
+Auxiliary Space: O(K) since at worst case only k elements are in the priority Queue.
