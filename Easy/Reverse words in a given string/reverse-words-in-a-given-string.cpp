@@ -8,35 +8,31 @@ class Solution
 {
     public:
     //Function to reverse words in a given string.
-    string reverseWords(string s) 
+    string reverseWords(string S) 
     { 
         // code here 
-        int n=s.length();
-        vector<string> temp;
-        string sCopy="";
-        for(int i=0;i<n;i++)
+        vector<string>vec ;
+        string str = "";
+         
+         
+        for(int i=0 ; i<S.size()   ; i++)
         {
-            if(s[i]=='.')
+            if(S[i] =='.')
             {
-                temp.push_back(sCopy);
-                temp.push_back(".");
-                sCopy="";
+                vec.push_back(str) ;
+                str="";
             }
             else{
-                sCopy +=s[i];
+            str += S[i] ;
             }
         }
-        temp.push_back(sCopy);
-        
-        
-        reverse(temp.begin(),temp.end());
-        string ans="";
-        for(int i=0;i<temp.size();i++ )
+           S=str ;
+        reverse(vec.begin() , vec.end()) ;
+        for(int i= 0; i<vec.size() ; i++)
         {
-            ans=ans+temp[i];
+            str += "." + vec[i] ;
         }
-        return ans;
-        
+        return str ;
     } 
 };
 
